@@ -1,5 +1,5 @@
 function runRules(data) {
-  const issues = [];
+  const flags = [];
 
   const earnings = data.earnings || [];
   const ratings = data.ratings || [];
@@ -13,7 +13,7 @@ function runRules(data) {
       Number(item.deductions);
 
     if (Number(item.final_payout) < expected) {
-      issues.push({
+      flags.push({
         type: "Underpayment",
         severity: "High",
         message: `Underpayment on ${item.date}: expected ${expected}, got ${item.final_payout}`,
@@ -25,7 +25,7 @@ function runRules(data) {
   for (let i = 1; i < ratings.length; i++) {
     let diff = ratings[i - 1].rating - ratings[i].rating;
     if (diff >= 1) {
-      issues.push({
+      flags.push({
         type: "Rating Drop",
         severity: "Medium",
         message: `Rating dropped by ${diff.toFixed(1)} on ${ratings[i].date}`
@@ -38,7 +38,7 @@ function runRules(data) {
     const exists = earnings.some((e) => e.order_id == p.related_order);
 
     if (!exists) {
-      issues.push({
+      flags.push({
         type: "Penalty Error",
         severity: "High",
         message: `Penalty on ${p.date} has NO matching order.`,
@@ -61,7 +61,7 @@ function runRules(data) {
     );
 
     if (totalOrders >= 10 && bonusCount === 0) {
-      issues.push({
+      flags.push({
         type: "Missing Bonus",
         severity: "Medium",
         message: `No bonus given on ${date} despite ${totalOrders} deliveries`,
@@ -72,7 +72,7 @@ function runRules(data) {
   // check for low pay for long distance
   earnings.forEach((item) => {
     if (item.distance_km > 5 && item.final_payout < 50) {
-      issues.push({
+      flags.push({
         type: "Distance Pay Mismatch",
         severity: "Low",
         message: `Low payout (${item.final_payout}) for ${item.distance_km} km on ${item.date}`,
@@ -83,7 +83,7 @@ function runRules(data) {
   // check for high penalties
   penalties.forEach((p) => {
     if (p.amount > 100) {
-      issues.push({
+      flags.push({
         type: "High Penalty",
         severity: "High",
         message: `Very high penalty (${p.amount}) on ${p.date}`,
@@ -91,7 +91,7 @@ function runRules(data) {
     }
   });
 
-  return issues;
+  return flags;
 }
 
 module.exports = { runRules };

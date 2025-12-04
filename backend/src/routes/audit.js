@@ -7,13 +7,13 @@ const router = express.Router();
 router.post("/", (req, res) => {
   const data = req.body;
 
-  const issues = runRules(data);
-  const score = calculateFairnessScore(issues);
+  const flags = runRules(data);
+  const score = calculateFairnessScore(flags);
 
   res.json({
     success: true,
     fairnessScore: score,
-    issues: issues
+    issues: flags
   });
 });
 

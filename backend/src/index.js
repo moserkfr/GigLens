@@ -1,3 +1,5 @@
+console.log("[server] index.js loaded...");
+
 const express = require("express");
 const cors = require("cors");
 
@@ -14,6 +16,11 @@ app.use("/upload", uploadRoutes);
 app.use("/audit", auditRoutes);
 app.use("/appeal", appealRoutes);
 
+console.log("Routes mounted: /upload, /audit, /appeal");
+
+
 app.listen(5000, () => {
-  console.log("Backend working on http://localhost:5000");
+    console.log("Backend working on http://localhost:5000");
+    console.log("Ready to accept requests.");
+
 });

@@ -1,12 +1,12 @@
 function calculateFairnessScore(issues) {
-  if (issues.length === 0) return 100;
+  if (flags.length === 0) return 100;
 
   let score = 100;
 
-  issues.forEach((issue) => {
-    if (issue.severity === "High") score -= 20;
-    else if (issue.severity === "Medium") score -= 10;
-    else if (issue.severity === "Low") score -= 5;
+  flags.forEach((flag) => {
+    if (flag.severity === "High") score -= 20;
+    else if (flag.severity === "Medium") score -= 10;
+    else if (flag.severity === "Low") score -= 5;
   });
 
   return Math.max(score, 0);
