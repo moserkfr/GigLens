@@ -28,6 +28,7 @@
     "updated_at": "2025-12-04T22:30:31.160Z"
   },
   {
+<<<<<<< HEAD
     "issue": null,
     "user": {
       "name": "Demo User"
@@ -44,11 +45,16 @@
     "submitted_at": "2025-12-04T23:47:56.994Z"
   },
   {
+=======
+    "id": "1764892105070",
+    "issue_id": null,
+>>>>>>> f439d911a5b199849757c710e459b83024253d9a
     "issue": null,
     "user": {
       "name": "Demo User"
     },
     "message": "hey3",
+<<<<<<< HEAD
     "submitted_at": "2025-12-04T23:48:01.594Z"
   },
   {
@@ -82,5 +88,11 @@
     },
     "message": "hey ",
     "submitted_at": "2025-12-04T23:50:25.454Z"
+=======
+    "attachments": [],
+    "status": "pending",
+    "admin_notes": "",
+    "submitted_at": "2025-12-04T23:48:25.070Z"
+>>>>>>> f439d911a5b199849757c710e459b83024253d9a
   }
 ]
