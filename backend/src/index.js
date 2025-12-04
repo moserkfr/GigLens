@@ -23,4 +23,7 @@ app.listen(5000, () => {
     console.log("Backend working on http://localhost:5000");
     console.log("Ready to accept requests.");
 
-});
+})
+const appealRoute = require("./routes/appeal");
+app.use("/appeal", appealRoute);
+

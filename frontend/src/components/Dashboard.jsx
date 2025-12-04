@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import ScoreCard from "./ScoreCard";
 import IssuesList from "./IssuesList";
 import EarningsChart from "./EarningsChart";
@@ -11,6 +12,13 @@ export default function Dashboard({ analysis, onBack }) {
   return (
     <div style={{ padding: 20 }}>
       <button onClick={onBack} style={{ marginBottom: 12 }}>← Back</button>
+
+      {/* ADD THE APPEALS BUTTON HERE */}
+      <div style={{ marginBottom: 20 }}>
+        <Link to="/appeals" style={{ textDecoration: "underline", color: "blue" }}>
+          Go to Appeals →
+        </Link>
+      </div>
 
       <div style={{ display: "flex", gap: 16, alignItems: "center", marginBottom: 20 }}>
         <ScoreCard score={fairnessScore ?? 100} />

@@ -1,1 +1,30 @@
-[]
+[
+  {
+    "id": "1764887322632",
+    "issue_id": null,
+    "issue": null,
+    "user": {
+      "name": "Demo User"
+    },
+    "message": "Hey",
+    "attachments": [],
+    "status": "resolved",
+    "admin_notes": "Reviewed and resolved",
+    "submitted_at": "2025-12-04T22:28:42.632Z",
+    "updated_at": "2025-12-04T22:29:19.439Z"
+  },
+  {
+    "id": "1764887418634",
+    "issue_id": null,
+    "issue": null,
+    "user": {
+      "name": "Demo User"
+    },
+    "message": "2nd appeal",
+    "attachments": [],
+    "status": "resolved",
+    "admin_notes": "Reviewed and resolved",
+    "submitted_at": "2025-12-04T22:30:18.634Z",
+    "updated_at": "2025-12-04T22:30:31.160Z"
+  }
+]
