@@ -44,22 +44,31 @@ export default function UploadPage({ onAnalyze }) {
 
   return (
     <div className="upload-container">
-      <h1>GigLens — Upload Your Data</h1>
+      <div className="square-box">
+        <h1 className="headerName">Hello.</h1>
+        <h2 className="subName"> I'm GigLens.</h2>
 
-      <label>Earnings CSV</label>
-      <input type="file" accept=".csv" onChange={(e) => setEarningsFile(e.target.files[0])} />
+        <div className="Earnings">
+        <label className="EarningsLabel">Earnings CSV</label>
+        <input type="file" accept=".csv" onChange={(e) => setEarningsFile(e.target.files[0])} />
+        </div>
 
-      <label>Ratings CSV</label>
-      <input type="file" accept=".csv" onChange={(e) => setRatingsFile(e.target.files[0])} />
+        <div className="Ratings">
+        <label className="RatingsLabel">Ratings CSV</label>
+        <input type="file" accept=".csv" onChange={(e) => setRatingsFile(e.target.files[0])} />
+        </div>
+         
+        <div className="Penalties">
+        <label className="PenaltiesLabel">Penalties CSV</label>
+        <input type="file" accept=".csv" onChange={(e) => setPenaltiesFile(e.target.files[0])} />
+        </div>
 
-      <label>Penalties CSV</label>
-      <input type="file" accept=".csv" onChange={(e) => setPenaltiesFile(e.target.files[0])} />
+        <button className="Analyze" disabled={loading} onClick={handleAnalyze}>
+          {loading ? "Analyzing..." : "Analyze"}
+        </button>
 
-      <button disabled={loading} onClick={handleAnalyze}>
-        {loading ? "Analyzing..." : "Analyze"}
-      </button>
-
-      {msg && <p style={{ color: "red" }}>{msg}</p>}
+        {msg && <p style={{ color: "red" }}>{msg}</p>}
+      </div>
     </div>
   );
 }
