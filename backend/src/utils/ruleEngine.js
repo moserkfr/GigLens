@@ -5,7 +5,7 @@ function runRules(data) {
   const ratings = data.ratings || [];
   const penalties = data.penalties || [];
 
-  // RULE 1: Underpayment
+  // check underpayment
   earnings.forEach((item) => {
     const expected =
       Number(item.base_pay) +
@@ -21,7 +21,7 @@ function runRules(data) {
     }
   });
 
-  // RULE 2: Suspicious Rating Drop
+  // check for rating drops
   for (let i = 1; i < ratings.length; i++) {
     let diff = ratings[i - 1].rating - ratings[i].rating;
     if (diff >= 1) {
@@ -33,7 +33,7 @@ function runRules(data) {
     }
   }
 
-  // RULE 3: Penalty without related order
+  // check for penalty without delivery
   penalties.forEach((p) => {
     const exists = earnings.some((e) => e.order_id == p.related_order);
 
@@ -46,7 +46,7 @@ function runRules(data) {
     }
   });
 
-  // RULE 4: Bonus missing when many orders
+  // check for missing bonuses
   const grouped = {};
   earnings.forEach((e) => {
     grouped[e.date] = grouped[e.date] || [];
@@ -69,7 +69,7 @@ function runRules(data) {
     }
   });
 
-  // RULE 5: Low pay for long distance
+  // check for low pay for long distance
   earnings.forEach((item) => {
     if (item.distance_km > 5 && item.final_payout < 50) {
       issues.push({
@@ -80,7 +80,7 @@ function runRules(data) {
     }
   });
 
-  // RULE 6: Very high penalty
+  // check for high penalties
   penalties.forEach((p) => {
     if (p.amount > 100) {
       issues.push({
