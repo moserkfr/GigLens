@@ -1,18 +1,33 @@
+// src/components/ScoreCard.jsx
+import React from "react";
+
+/**
+ * Props:
+ *  - score: number (0-100)
+ */
 export default function ScoreCard({ score = 100 }) {
-  const numeric = Number(score);
-  const color = numeric >= 75 ? "#16a34a" : numeric >= 40 ? "#f59e0b" : "#ef4444";
+  const numeric = Number(score ?? 0);
+  const color =
+    numeric >= 75 ? "var(--success)" :
+    numeric >= 40 ? "var(--warning)" :
+    "var(--danger)";
 
   return (
-    <div style={{
-      border: `2px solid ${color}`,
-      padding: 16,
-      borderRadius: 8,
-      minWidth: 160,
-      textAlign: "center",
-      boxShadow: "0 6px 18px rgba(0,0,0,0.06)"
-    }}>
-      <div style={{ fontSize: 14, color: "#444" }}>Fairness Score</div>
-      <div style={{ marginTop: 8, fontSize: 36, fontWeight: 700, color }}>{numeric}/100</div>
+    <div className="card score" style={{ textAlign: "center" }}>
+      <div className="small">Fairness Score</div>
+
+      <div
+        className="value"
+        style={{
+          color,
+          fontVariantNumeric: "tabular-nums",
+          marginTop: 8
+        }}
+      >
+        {numeric}/100
+      </div>
+
+      <div className="space-top small">Higher is better</div>
     </div>
   );
 }
