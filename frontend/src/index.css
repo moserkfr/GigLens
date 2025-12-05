@@ -108,3 +108,10 @@ button:focus-visible {
     background-color: #f0e7d6;
     color: black;
 }
+
+.appealform {
+    background-color: #9dbdb8;
+    width: 500px;
+    padding: 20px;
+    border-radius: 10px;
+}
