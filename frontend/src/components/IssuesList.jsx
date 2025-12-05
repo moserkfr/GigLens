@@ -24,7 +24,7 @@ export default function IssuesList({ issues = [] }) {
               <div style={{ color: "#444" }}>{it.message}</div>
             </div>
             <div style={{ display: "flex", gap: 8 }}>
-              <button onClick={() => setSelected(it)}>Raise Appeal</button>
+              <button className="raiseapp" onClick={() => setSelected(it)}>Raise Appeal</button>
             </div>
           </div>
         ))}

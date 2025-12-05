@@ -34,3 +34,8 @@
     font-size: 22px;
     top: 10px;
 }
+
+.raiseapp, .cancelapp, .submitapp {
+    background-color: #f0e7d6;
+    color: black;
+}
