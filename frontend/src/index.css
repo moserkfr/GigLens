@@ -115,3 +115,30 @@ button:focus-visible {
     padding: 20px;
     border-radius: 10px;
 }
+.Background{
+  background-color: #9dbdb8;
+  position: relative;
+  height: 1100px;
+  width: 1264px;
+}
+
+.appSquare {
+  background-color: #f0e7d6;
+  height: 300px;
+  width: 1200px;
+  position: relative;
+  top: 30px;
+  left: 30px;
+  border-radius: 30px;
+  box-shadow: 10px 10px black;
+}
+.appealformheader{
+  text-align: center;
+  color: #ea2e00;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.appealhistoryheader{
+  position: relative;
+  text-align: center;
+  top: 50px;
+}
