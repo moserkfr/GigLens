@@ -6,7 +6,7 @@ export default function Dashboard({ analysis, onBack }) {
   const { fairnessScore, issues = [], rawData = {} } = analysis || {};
 
   return (
-    <div className="dashboard" style={{ padding: 20 }}>
+    <div className="dashboard" style={{ padding: 20, zoom: 0.725 }}>
       <div className="navbar1">
         <button className="navbar1button" onClick={onBack} style={{ marginBottom: 12 }}>← Back</button>
       </div>

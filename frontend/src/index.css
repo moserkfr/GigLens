@@ -69,7 +69,7 @@ button:focus-visible {
 
 .dashboard {
     background-color: #9dbdb8;
-    width: 1480px;
+    width: 1700px;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
@@ -86,13 +86,15 @@ button:focus-visible {
 
 .navbar2 {
     position: relative;
+    height: 50px;
+    width: 150px;
     top: -40px;
-    left: 1340px;
+    left: 1565px;
 }
 
 .score {
     position: relative;
-    left: 600px;
+    left: 725px;
     color: #ea2e00;
     font-size: 20px;
 }
@@ -118,7 +120,7 @@ button:focus-visible {
 .Background{
   background-color: #9dbdb8;
   position: relative;
-  height: 1100px;
+  height: 3000px;
   width: 1264px;
 }
 
@@ -141,4 +143,7 @@ button:focus-visible {
   position: relative;
   text-align: center;
   top: 50px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color:#ea2e00;
+
 }

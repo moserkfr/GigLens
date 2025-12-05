@@ -1,0 +1,13 @@
+date,penalty_reason,amount,related_order
+2025-01-01,Late Delivery,20,2001
+2025-01-02,None,30,
+2025-01-03,Late Delivery,20,2005
+2025-01-04,Late Delivery,20,2104
+2025-01-05,None,30,
+2025-01-07,Late Delivery,20,2009
+2025-01-10,Late Delivery,20,2012
+2025-01-12,None,30,
+2025-01-15,Late Delivery,20,2017
+
+# Penalty error for HIGH severity (no matching order)
+2025-01-13,Incorrect Penalty,20,9999
