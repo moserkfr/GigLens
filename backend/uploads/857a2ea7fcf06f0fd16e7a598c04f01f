@@ -3,7 +3,7 @@ date,order_id,base_pay,bonus,deductions,final_payout,distance_km
 2025-01-01,2002,45,0,0,45,6.8   # low-severity
 2025-01-02,2003,48,0,0,48,4.8
 2025-01-02,2004,52,0,0,52,7.1
-2025-01-03,2005,46,0,0,46,7.5   # underpayment (HIGH)
+2025-01-03,2005,46,0,0,30,7.5   # underpayment (HIGH)
 2025-01-03,2006,47,0,0,47,1.9
 
 # 10‑order no‑bonus day for "Missing Bonus" (MEDIUM)
