@@ -22,9 +22,8 @@ export default function AppealModal({ issue, onClose }) {
   }
 
   return (
-    <div style={{
-      position: "fixed", left: 0, right: 0, top: 0, bottom: 0,
-      background: "rgba(0,0,0,0.4)", display: "flex", alignItems: "center", justifyContent: "center"
+    <div className="BackgroundApp" style={{
+      position: "fixed", left: 0, right: 0, top: 0, bottom: 0, display: "flex", alignItems: "center", justifyContent: "center"
     }}>
       <div style={{ width: 520, background: "#fff", padding: 18, borderRadius: 8 }}>
         <h4 style={{ marginTop: 0 }}>Appeal — {issue.type}</h4>
