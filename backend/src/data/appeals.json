@@ -28,71 +28,32 @@
     "updated_at": "2025-12-04T22:30:31.160Z"
   },
   {
-<<<<<<< HEAD
-    "issue": null,
-    "user": {
-      "name": "Demo User"
-    },
-    "message": "hey",
-    "submitted_at": "2025-12-04T23:47:51.829Z"
-  },
-  {
-    "issue": null,
-    "user": {
-      "name": "Demo User"
-    },
-    "message": "hey2",
-    "submitted_at": "2025-12-04T23:47:56.994Z"
-  },
-  {
-=======
     "id": "1764892105070",
     "issue_id": null,
->>>>>>> f439d911a5b199849757c710e459b83024253d9a
     "issue": null,
     "user": {
       "name": "Demo User"
     },
     "message": "hey3",
-<<<<<<< HEAD
-    "submitted_at": "2025-12-04T23:48:01.594Z"
-  },
-  {
-    "issue": null,
-    "user": {
-      "name": "Demo User"
-    },
-    "message": "hey2",
-    "submitted_at": "2025-12-04T23:48:11.032Z"
-  },
-  {
-    "issue": null,
-    "user": {
-      "name": "Demo User"
-    },
-    "message": "hey",
-    "submitted_at": "2025-12-04T23:50:05.431Z"
-  },
-  {
-    "issue": null,
-    "user": {
-      "name": "Demo User"
-    },
-    "message": "hey 2",
-    "submitted_at": "2025-12-04T23:50:10.866Z"
-  },
-  {
-    "issue": null,
-    "user": {
-      "name": "Demo User"
-    },
-    "message": "hey ",
-    "submitted_at": "2025-12-04T23:50:25.454Z"
-=======
     "attachments": [],
     "status": "pending",
     "admin_notes": "",
     "submitted_at": "2025-12-04T23:48:25.070Z"
->>>>>>> f439d911a5b199849757c710e459b83024253d9a
+  },
+  {
+    "id": "1764898027298",
+    "issue_id": null,
+    "issue": {
+      "type": "Penalty Error",
+      "severity": "High",
+      "message": "Penalty on 2025-01-02 has NO matching order."
+    },
+    "user": null,
+    "message": "yoo",
+    "attachments": [],
+    "status": "resolved",
+    "admin_notes": "Reviewed and resolved",
+    "submitted_at": "2025-12-05T01:27:07.298Z",
+    "updated_at": "2025-12-05T01:27:12.200Z"
   }
 ]
