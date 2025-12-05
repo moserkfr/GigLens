@@ -66,3 +66,52 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+.dashboard {
+    background-color: #9dbdb8;
+    width: 1480px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.navbar1 {
+    position: relative;
+    top: 5px;
+    left: 0px;
+}
+
+.navbar1button {
+    background-color: #f0e7d6 ;
+    color: black;
+}
+
+.navbar2 {
+    position: relative;
+    top: -40px;
+    left: 1340px;
+}
+
+.score {
+    position: relative;
+    left: 600px;
+    color: #ea2e00;
+    font-size: 20px;
+}
+
+.overview {
+    position: relative;
+    left: -310px;
+    font-size: 22px;
+    top: 10px;
+}
+
+.raiseapp, .cancelapp, .submitapp {
+    background-color: #f0e7d6;
+    color: black;
+}
+
+.appealform {
+    background-color: #9dbdb8;
+    width: 500px;
+    padding: 20px;
+    border-radius: 10px;
+}

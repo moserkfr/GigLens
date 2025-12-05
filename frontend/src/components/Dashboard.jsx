@@ -31,13 +31,10 @@ export default function Dashboard({ analysis, onBack }) {
       </div>
       
 
-      <div style={{ display: "flex", gap: 16, alignItems: "center", marginBottom: 20 }}>
-        <ScoreCard score={fairnessScore ?? 100} />
-        <div style={{ flex: 1 }}>
-          <h3 style={{ margin: 0 }}>Overview</h3>
-          <p style={{ marginTop: 6, color: "#555" }}>
-            Fairness score and flagged issues based on uploaded data.
-          </p>
+      <div className="Brief" style={{ display: "flex", gap: 16, alignItems: "center", marginBottom: 20 }}>
+        <ScoreCard className="score" score={fairnessScore ?? 100} />
+        <div className="overview" style={{ flex: 1 }}>
+          <h3 style={{ margin: 0 }}>Overview:</h3>
         </div>
       </div>
 

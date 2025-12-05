@@ -31,7 +31,7 @@ export default function AppealForm({ prefillIssue }) {
   }
 
   return (
-    <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+      <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: 8 }}>
       <textarea value={message} onChange={(e)=>setMessage(e.target.value)} rows={6} />
       {error && <div style={{ color: "red" }}>{error}</div>}
       {saved && <div style={{ color: "green" }}>Appeal submitted (id: {saved.id})</div>}

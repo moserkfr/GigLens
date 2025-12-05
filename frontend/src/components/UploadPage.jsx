@@ -42,6 +42,8 @@ export default function UploadPage({ onAnalyze }) {
     setLoading(false);
   }
 
+  const canAnalyze = earningsFile && ratingsFile && penaltiesFile;
+
   return (
     <div className="upload-container">
       <div className="square-box">
@@ -63,9 +65,14 @@ export default function UploadPage({ onAnalyze }) {
         <input type="file" accept=".csv" onChange={(e) => setPenaltiesFile(e.target.files[0])} />
         </div>
 
-        <button className="Analyze" disabled={loading} onClick={handleAnalyze}>
+        <button 
+          className="Analyze" 
+          disabled={loading || !canAnalyze}
+          onClick={handleAnalyze}
+        >
           {loading ? "Analyzing..." : "Analyze"}
         </button>
+
 
         {msg && <p style={{ color: "red" }}>{msg}</p>}
       </div>
