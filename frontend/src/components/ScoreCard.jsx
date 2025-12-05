@@ -14,16 +14,18 @@ export default function ScoreCard({ score = 100 }) {
 
   return (
     <div className="card score" style={{ textAlign: "center" }}>
-      <div className="small">Fairness Score</div>
+      <div className="small" style={{fontSize:35}}>Fairness Score</div>
 
       <div
         className="value"
         style={{
           color,
           fontVariantNumeric: "tabular-nums",
-          marginTop: 8
+          marginTop: 8,
+          fontSize: 90,
+          fontStyle: "bold",
         }}
-      >
+      > 
         {numeric}/100
       </div>
 

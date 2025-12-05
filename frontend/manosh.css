@@ -1,6 +1,7 @@
 .dashboard {
     background-color: #9dbdb8;
     width: 1480px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .navbar1 {
@@ -18,4 +19,18 @@
     position: relative;
     top: -40px;
     left: 1340px;
+}
+
+.score {
+    position: relative;
+    left: 600px;
+    color: #ea2e00;
+    font-size: 20px;
+}
+
+.overview {
+    position: relative;
+    left: -310px;
+    font-size: 22px;
+    top: 10px;
 }
